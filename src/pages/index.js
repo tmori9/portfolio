@@ -43,24 +43,54 @@ export default function Home() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <Container component="main" className={classes.main} maxWidth="sm">
-        <Typography variant="h2" component="h1" gutterBottom>
-          Portfolio
+      <Container component="main" className={classes.main} maxWidth="md">
+        <Typography variant="h2" gutterBottom>Portfolio</Typography>
+        <Typography variant="h5" gutterBottom>
+          <Box textAlign="jusify">名前: Mori Yuto</Box>
+          <Box textAlign="jusify">ユーザーネーム: Tmori.</Box>
+          <Box textAlign="jusify">出身: 北海道</Box>
+          <Box textAlign="jusify">メール: tmori9banner at gmail.com</Box>
         </Typography>
-        <Typography variant="h5" component="h2" gutterBottom>
-          <Box textAlign="jusify">
-            名前: Mori Yuto
-          </Box>
-          <Box textAlign="jusify">
-            ユーザーネーム: Tmori.
-          </Box>
-          <Box textAlign="jusify">
-            出身: 北海道
-          </Box>
-          <Box textAlign="jusify">
-            メール: tmori9banner at gmail.com
-          </Box>
+        <Box m={4} />
+
+        <Typography variant="h4" gutterBottom>略歴</Typography>
+        <Typography variant="h5" gutterBottom>
+          <Box textAlign="jusify">・札幌旭丘高等学校 卒業</Box>
+          <Box textAlign="jusify">・公立はこだて未来大学複雑系知能学科 卒業</Box>
+          <Box textAlign="jusify">・北海道大学大学院情報科学院 現在</Box>
         </Typography>
+        <Box m={4} />
+
+        <Typography variant="h4" gutterBottom>資格、実績</Typography>
+        <Typography variant="h5" gutterBottom>
+          <Box textAlign="jusify">・基本情報技術者試験 合格</Box>
+          <Box textAlign="jusify">・G検定 (JDLA Deep Learning for GENERAL 2019 #3) 合格</Box>
+          <Box textAlign="jusify">・enPiT-BizSysD ビジネスシステムデザイン分野 (公立はこだて未来大学) 修了</Box>
+          <Box textAlign="jusify">・enPiT-AiBiC ビッグデータ・AI分野 (東京工業大学) 修了</Box>
+        </Typography>
+        <Box m={4} />
+
+        <Typography variant="h4" gutterBottom>アルバイト</Typography>
+        <Typography variant="h5" gutterBottom>
+          <Box textAlign="jusify">・2019年3月- 札幌のIT企業で姿勢制御の機械学習モデルの作成、マイコンの制御プログラムなどを作成</Box>
+        </Typography>
+        <Box m={4} />
+
+        <Typography variant="h4" gutterBottom>研究</Typography>
+        <Typography variant="h5" gutterBottom>
+          <Box textAlign="jusify">・深層学習を用いた定置網音響画像からの魚種判別・漁獲量予測</Box>
+          <Box textAlign="jusify">・介護者の負担軽減を目的とした自律走行可能な福祉用具の開発</Box>
+        </Typography>
+        <Box m={4} />
+
+        <Typography variant="h4" gutterBottom>成果物</Typography>
+        <Typography variant="h5" gutterBottom>
+          <Box textAlign="jusify">・2018年度プロジェクト学習 ビーコンIoTで函館のまちをハックする – BEACON FUN Reloaded 「＠ハナセル」</Box>
+          <Box textAlign="jusify">・Alexa スキル 「ゆで卵タイマー」(現在停止中)</Box>
+          <Box textAlign="jusify">・Line Clova スキル 「ナンバーパンチ ~数字推測×ボクシング~」</Box>
+        </Typography>
+        <Box m={4} />
+
       </Container>
       <footer className={classes.footer}>
         <Container maxWidth="sm">
