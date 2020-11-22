@@ -5,6 +5,16 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import Box from '@material-ui/core/Box';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import Avatar from '@material-ui/core/Avatar';
+
+// Icon
+import SchoolIcon from '@material-ui/icons/School';
+import SettingsVoiceIcon from '@material-ui/icons/SettingsVoice';
+import WorkIcon from '@material-ui/icons/Work';
 
 function Copyright() {
   return (
@@ -65,33 +75,117 @@ export default function Home() {
         <Typography variant="h5" gutterBottom>
           <Box textAlign="jusify">・基本情報技術者試験 合格</Box>
           <Box textAlign="jusify">・G検定 (JDLA Deep Learning for GENERAL 2019 #3) 合格</Box>
-          <Box textAlign="jusify">・enPiT-BizSysD ビジネスシステムデザイン分野 (公立はこだて未来大学) 修了</Box>
-          <Box textAlign="jusify">・enPiT-AiBiC ビッグデータ・AI分野 (東京工業大学) 修了</Box>
+          <Box textAlign="jusify">
+            ・<a href="https://bizsysd.enpit.jp/" target="_blank" rel="noopener noreferrer">enPiT-BizSysD</a> ビジネスシステムデザイン分野 (公立はこだて未来大学) 修了</Box>
+          <Box textAlign="jusify">
+            ・<a href="https://aibic.enpit.jp/" target="_blank" rel="noopener noreferrer">enPiT-AiBiC</a> ビッグデータ・AI分野 (東京工業大学) 修了</Box>
         </Typography>
         <Box m={4} />
 
         <Typography variant="h4" gutterBottom>アルバイト</Typography>
-        <Typography variant="h5" gutterBottom>
-          <Box textAlign="jusify">・2019年3月- 札幌のIT企業で姿勢制御の機械学習モデルの作成、マイコンの制御プログラムなどを作成</Box>
-        </Typography>
+        <List>
+        <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <WorkIcon />
+          </Avatar>
+        </ListItemAvatar>
+          <ListItemText primary="2019年3月- 札幌のIT企業で姿勢制御の機械学習モデルの作成、マイコンの制御プログラムなどを作成">
+            </ListItemText>
+        </ListItem>
+        </List>
         <Box m={4} />
 
         <Typography variant="h4" gutterBottom>研究</Typography>
-        <Typography variant="h5" gutterBottom>
-          <Box textAlign="jusify">・深層学習を用いた定置網音響画像からの魚種判別・漁獲量予測</Box>
-          <Box textAlign="jusify">・介護者の負担軽減を目的とした自律走行可能な福祉用具の開発</Box>
-        </Typography>
+        <List>
+        <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <SchoolIcon />
+          </Avatar>
+        </ListItemAvatar>
+          <ListItemText primary="深層学習を用いた定置網音響画像からの魚種判別・漁獲量予測" 
+                        secondary={
+                          <React.Fragment>
+                            <Typography>
+                              <a href="https://www.ieice.org/ken/paper/20200309t1x2/">pdf</a>
+                              </Typography>
+                          </React.Fragment>
+                        }>
+            </ListItemText>
+        </ListItem>
+        <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <SchoolIcon />
+          </Avatar>
+        </ListItemAvatar>
+          <ListItemText primary="介護者の負担軽減を目的とした自律走行可能な福祉用具の開発">
+            </ListItemText>
+        </ListItem>
+        </List>
         <Box m={4} />
 
         <Typography variant="h4" gutterBottom>成果物</Typography>
-        <Typography variant="h5" gutterBottom>
-          <Box textAlign="jusify">・2018年度プロジェクト学習 ビーコンIoTで函館のまちをハックする – BEACON FUN Reloaded 「＠ハナセル」</Box>
-          <Box textAlign="jusify">・Alexa スキル 「ゆで卵タイマー」(現在停止中)</Box>
-          <Box textAlign="jusify">・Line Clova スキル 「ナンバーパンチ ~数字推測×ボクシング~」</Box>
-        </Typography>
-        <Box m={4} />
+      <List>
+        <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <SchoolIcon />
+          </Avatar>
+        </ListItemAvatar>
+          <ListItemText primary="2018年度プロジェクト学習 ビーコンIoTで函館のまちをハックする – BEACON FUN Reloaded 「＠ハナセル」" 
+                        secondary={
+                          <React.Fragment>
+                            <Typography>
+                              <a href="https://hanaseru.herokuapp.com/" target="_blank" rel="noopener noreferrer">webサイト</a>
+                              </Typography>
+                            <Typography>
+                              <a href="https://www.fun.ac.jp/wp-content/uploads/2020/03/poster14-1.pdf" target="_blank" rel="noopener noreferrer">ポスター</a>
+                            </Typography>
+                            <Typography>
+                              <a href="https://www.fun.ac.jp/wp-content/uploads/2020/03/document14_A-1.pdf" target="_blank" rel="noopener noreferrer">報告書</a>
+                            </Typography>
+                          </React.Fragment>
+                        }>
+            </ListItemText>
+        </ListItem>
+        <ListItem>
+          <ListItemAvatar>
+            <Avatar>
+              <SettingsVoiceIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText primary="Alexa スキル 「ゆで卵タイマー」(現在停止中)" 
+                        secondary={
+                                   <React.Fragment>
+                                     <Typography>
+                                       <a href="https://www.amazon.co.jp/Tmori-%E3%82%86%E3%81%A7%E5%8D%B5%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/dp/B07GZGB98L">公開サイト (Amazon)</a>
+                                     </Typography>
+                                   </React.Fragment>
+                                  }>
+          </ListItemText>
+        </ListItem>
+        <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <SettingsVoiceIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="LINE Clova スキル「ナンバーパンチ ~数字推測×ボクシング~」" 
+                      secondary={
+                                   <React.Fragment>
+                                     <Typography>
+                                       <a href="https://www.amazon.co.jp/Tmori-%E3%82%86%E3%81%A7%E5%8D%B5%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/dp/B07GZGB98L">公開サイト (LINE Clova スキルストア)</a>
+                                     </Typography>
+                                   </React.Fragment>
+                                  }>
+          </ListItemText>
+        </ListItem>
+      </List>
 
       </Container>
+
       <footer className={classes.footer}>
         <Container maxWidth="sm">
           <Typography variant="body1">Yuto Mori's portfolio.</Typography>
