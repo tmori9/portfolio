@@ -15,6 +15,7 @@ import Avatar from '@material-ui/core/Avatar';
 import SchoolIcon from '@material-ui/icons/School';
 import SettingsVoiceIcon from '@material-ui/icons/SettingsVoice';
 import WorkIcon from '@material-ui/icons/Work';
+import LinkIcon from '@material-ui/icons/Link';
 
 function Copyright() {
   return (
@@ -160,7 +161,7 @@ export default function Home() {
                         secondary={
                                    <React.Fragment>
                                      <Typography>
-                                       <a href="https://www.amazon.co.jp/Tmori-%E3%82%86%E3%81%A7%E5%8D%B5%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/dp/B07GZGB98L">公開サイト (Amazon)</a>
+                                       <a href="https://www.amazon.co.jp/Tmori-%E3%82%86%E3%81%A7%E5%8D%B5%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/dp/B07GZGB98L"　target="_blank" rel="noopener noreferrer">公開サイト (Amazon)</a>
                                      </Typography>
                                    </React.Fragment>
                                   }>
@@ -176,7 +177,7 @@ export default function Home() {
                       secondary={
                                    <React.Fragment>
                                      <Typography>
-                                       <a href="https://www.amazon.co.jp/Tmori-%E3%82%86%E3%81%A7%E5%8D%B5%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/dp/B07GZGB98L">公開サイト (LINE Clova スキルストア)</a>
+                                       <a href="https://www.amazon.co.jp/Tmori-%E3%82%86%E3%81%A7%E5%8D%B5%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/dp/B07GZGB98L"　target="_blank" rel="noopener noreferrer">公開サイト (LINE Clova スキルストア)</a>
                                      </Typography>
                                    </React.Fragment>
                                   }>
@@ -184,6 +185,69 @@ export default function Home() {
         </ListItem>
       </List>
 
+      <Typography variant="h4" gutterBottom>Links</Typography>
+      <List>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <LinkIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary={
+                                <React.Fragment>
+                                  <Typography>
+                                    <a href="https://github.com/tmori9"　target="_blank" rel="noopener noreferrer">GitHub</a>
+                                  </Typography>
+                                </React.Fragment>
+                              }>
+          </ListItemText>
+        </ListItem>
+        <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <LinkIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary={
+                                <React.Fragment>
+                                  <Typography>
+                                    <a href="https://www.slideshare.net/YutoMori2/presentations"　target="_blank" rel="noopener noreferrer">SlideShare</a>
+                                  </Typography>
+                                </React.Fragment>
+                              }>
+          </ListItemText>
+        </ListItem>
+        <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <LinkIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary={
+                                <React.Fragment>
+                                  <Typography>
+                                    <a href="https://tmoribanner.hateblo.jp/"　target="_blank" rel="noopener noreferrer">はてなブログ</a>
+                                  </Typography>
+                                </React.Fragment>
+                              }>
+          </ListItemText>
+        </ListItem>
+        <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <LinkIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary={
+                                <React.Fragment>
+                                  <Typography>
+                                    <a href="https://qiita.com/Tmori_banner"　target="_blank" rel="noopener noreferrer">Qiita (停止中)</a>
+                                  </Typography>
+                                </React.Fragment>
+                              }>
+          </ListItemText>
+        </ListItem>
+      </List>
       </Container>
 
       <footer className={classes.footer}>
