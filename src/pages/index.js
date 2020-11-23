@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3, 2),
     marginTop: 'auto',
     backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
+      theme.palette.type === 'light' ? theme.palette.grey[300] : theme.palette.grey[800],
   },
 }));
 
@@ -61,6 +61,7 @@ export default function Home() {
       <Head title="Yuto Mori's Portfolio"/>
       <CssBaseline />
       <Container component="main" className={classes.main} maxWidth="md">
+        <Box m={1} />
         <Typography variant="h2" gutterBottom>Portfolio</Typography>
         <Typography variant="h5" gutterBottom>
           <Box textAlign="jusify">名前: Mori Yuto</Box>
