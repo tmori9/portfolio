@@ -11,11 +11,17 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 
+// local components
+import Head from '../components/head'
+
 // Icon
 import SchoolIcon from '@material-ui/icons/School';
 import SettingsVoiceIcon from '@material-ui/icons/SettingsVoice';
 import WorkIcon from '@material-ui/icons/Work';
 import LinkIcon from '@material-ui/icons/Link';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import CreateIcon from '@material-ui/icons/Create';
 
 function Copyright() {
   return (
@@ -50,9 +56,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home() {
   const classes = useStyles();
-
   return (
     <div className={classes.root}>
+      <Head title="Yuto Mori's Portfolio"/>
       <CssBaseline />
       <Container component="main" className={classes.main} maxWidth="md">
         <Typography variant="h2" gutterBottom>Portfolio</Typography>
@@ -65,22 +71,83 @@ export default function Home() {
         <Box m={4} />
 
         <Typography variant="h4" gutterBottom>略歴</Typography>
-        <Typography variant="h5" gutterBottom>
-          <Box textAlign="jusify">・札幌旭丘高等学校 卒業</Box>
-          <Box textAlign="jusify">・公立はこだて未来大学複雑系知能学科 卒業</Box>
-          <Box textAlign="jusify">・北海道大学大学院情報科学院 現在</Box>
-        </Typography>
+        <List>
+          <ListItem>
+            <ListItemAvatar>
+              <Avatar>
+                <CreateIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary="札幌旭丘高等学校 卒業" />
+          </ListItem>
+          <ListItem>
+            <ListItemAvatar>
+              <Avatar>
+                <SchoolIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary="公立はこだて未来大学複雑系知能学科 卒業" />
+          </ListItem>
+          <ListItem>
+            <ListItemAvatar>
+              <Avatar>
+                <SchoolIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary="北海道大学大学院情報科学院 現在" />
+          </ListItem>  
+        </List>
         <Box m={4} />
 
         <Typography variant="h4" gutterBottom>資格、実績</Typography>
-        <Typography variant="h5" gutterBottom>
-          <Box textAlign="jusify">・基本情報技術者試験 合格</Box>
-          <Box textAlign="jusify">・G検定 (JDLA Deep Learning for GENERAL 2019 #3) 合格</Box>
-          <Box textAlign="jusify">
-            ・<a href="https://bizsysd.enpit.jp/" target="_blank" rel="noopener noreferrer">enPiT-BizSysD</a> ビジネスシステムデザイン分野 (公立はこだて未来大学) 修了</Box>
-          <Box textAlign="jusify">
-            ・<a href="https://aibic.enpit.jp/" target="_blank" rel="noopener noreferrer">enPiT-AiBiC</a> ビッグデータ・AI分野 (東京工業大学) 修了</Box>
-        </Typography>
+        <List>
+          <ListItem>
+            <ListItemAvatar>
+              <Avatar>
+                <AccountBoxIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary="基本情報技術者試験 合格" />
+          </ListItem>
+          <ListItem>
+            <ListItemAvatar>
+              <Avatar>
+                <AccountBoxIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary="G検定 (JDLA Deep Learning for GENERAL 2019 #3) 合格" />
+          </ListItem>
+          <ListItem>
+            <ListItemAvatar>
+              <Avatar>
+                <AccountBoxIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary="enPiT-BizSysD ビジネスシステムデザイン分野 (公立はこだて未来大学) 修了"
+                          secondary={
+                            <React.Fragment>
+                              <Typography>
+                                <a href="https://bizsysd.enpit.jp/"　target="_blank" rel="noopener noreferrer">webサイト</a>
+                                </Typography>
+                            </React.Fragment>
+                          }/>
+          </ListItem>
+          <ListItem>
+            <ListItemAvatar>
+              <Avatar>
+                <AccountBoxIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary="enPiT-AiBiC ビッグデータ・AI分野 (東京工業大学) 修了"
+                          secondary={
+                            <React.Fragment>
+                              <Typography>
+                                <a href="https://aibic.enpit.jp/"　target="_blank" rel="noopener noreferrer">webサイト</a>
+                              </Typography>
+                            </React.Fragment>
+                          }/>
+          </ListItem>
+        </List>
         <Box m={4} />
 
         <Typography variant="h4" gutterBottom>アルバイト</Typography>
@@ -124,8 +191,8 @@ export default function Home() {
           <ListItemText primary="介護者の負担軽減を目的とした自律走行可能な福祉用具の開発">
             </ListItemText>
         </ListItem>
-        </List>
-        <Box m={4} />
+      </List>
+      <Box m={4} />
 
         <Typography variant="h4" gutterBottom>成果物</Typography>
       <List>
@@ -184,13 +251,14 @@ export default function Home() {
           </ListItemText>
         </ListItem>
       </List>
+      <Box m={4} />
 
       <Typography variant="h4" gutterBottom>Links</Typography>
       <List>
       <ListItem>
         <ListItemAvatar>
           <Avatar>
-            <LinkIcon />
+            <GitHubIcon />
           </Avatar>
         </ListItemAvatar>
         <ListItemText primary={

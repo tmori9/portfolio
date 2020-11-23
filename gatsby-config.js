@@ -5,7 +5,14 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `Yuto Mori's Portfolio`,
+    description: `This site is Yuto Mori's portfolio.`,
+    author: `Yuto Mori`,
+  },
   pathPrefix: "/portfolio",
-  plugins: [`gatsby-plugin-material-ui`],
+  plugins: [
+    `gatsby-plugin-material-ui`,
+    `gatsby-plugin-react-helmet`,
+  ],
 }
