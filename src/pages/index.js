@@ -245,7 +245,7 @@ export default function Home() {
                       secondary={
                                    <React.Fragment>
                                      <Typography>
-                                       <a href="https://www.amazon.co.jp/Tmori-%E3%82%86%E3%81%A7%E5%8D%B5%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/dp/B07GZGB98L"　target="_blank" rel="noopener noreferrer">公開サイト (LINE Clova スキルストア)</a>
+                                       <a href="https://clova.line.me/clova-ai/skillstore/skill/com.hitandblow.tmori"　target="_blank" rel="noopener noreferrer">公開サイト (LINE Clova スキルストア)</a>
                                      </Typography>
                                    </React.Fragment>
                                   }>
